@@ -7,8 +7,8 @@
 
 ## Environment
 
-> **Ionic:**
->
+**Ionic:**
+
 > Ionic CLI                     : 7.2.0
 >
 > Ionic Framework               : @ionic/angular 8.4.3
@@ -21,8 +21,9 @@
 >
 > @ionic/angular-toolkit        : 12.1.1
 >
-> **Capacitor:**
->
+
+**Capacitor:**
+
 > Capacitor CLI      : 7.0.1
 >
 > @capacitor/android : 7.0.1
@@ -31,10 +32,10 @@
 >
 > @capacitor/ios     : 7.0.1
 >
-> **Utility:**
+**Utility:**
 > native-run  : 2.0.1
 >
-> **System:**
+**System:**
 >
 > NodeJS : v20.14.0
 >
