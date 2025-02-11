@@ -7,29 +7,38 @@
 
 ## Environment
 
->Ionic:
+> **Ionic:**
 >
->  Ionic CLI                     : 7.2.0
->   Ionic Framework               : @ionic/angular 8.4.3
->   @angular-devkit/build-angular : 19.1.6
->   @angular-devkit/schematics    : 19.1.6
->   @angular/cli                  : 19.1.6
->   @ionic/angular-toolkit        : 12.1.1
+> Ionic CLI                     : 7.2.0
 >
->Capacitor:
+> Ionic Framework               : @ionic/angular 8.4.3
 >
->   Capacitor CLI      : 7.0.1
->   @capacitor/android : 7.0.1
->   @capacitor/core    : 7.0.1
->   @capacitor/ios     : 7.0.1
+> @angular-devkit/build-angular : 19.1.6
 >
->Utility:
->   native-run  : 2.0.1
+> @angular-devkit/schematics    : 19.1.6
 >
->System:
+> @angular/cli                  : 19.1.6
 >
->   NodeJS : v20.14.0
->   npm    : 10.7.0
+> @ionic/angular-toolkit        : 12.1.1
+>
+> **Capacitor:**
+>
+> Capacitor CLI      : 7.0.1
+>
+> @capacitor/android : 7.0.1
+>
+> @capacitor/core    : 7.0.1
+>
+> @capacitor/ios     : 7.0.1
+>
+> **Utility:**
+> native-run  : 2.0.1
+>
+> **System:**
+>
+> NodeJS : v20.14.0
+>
+> npm    : 10.7.0
 
 ## Install
 
