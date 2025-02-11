@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import { authGuard } from '../auth.guard';
 
 export const routes: Routes = [
   {
@@ -7,30 +8,37 @@ export const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'home',
         loadComponent: () =>
-          import('../tab1/tab1.page').then((m) => m.Tab1Page),
+          import('../pages/home/home.page').then((m) => m.HomePage),
       },
       {
-        path: 'tab2',
-        loadComponent: () =>
-          import('../tab2/tab2.page').then((m) => m.Tab2Page),
+        path: 'training',
+        loadComponent: () => 
+          import('../pages/training/training.page').then((m) => m.TrainingPage),
       },
       {
-        path: 'tab3',
+        path: 'notifications',
         loadComponent: () =>
-          import('../tab3/tab3.page').then((m) => m.Tab3Page),
+          import('../pages/notifications/notifications.page').then(
+            (m) => m.NotificationsPage
+          ),
+      },
+      {
+        path: 'account',
+        loadComponent: () =>
+          import('../pages/account/account.page').then((m) => m.AccountPage),
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/home',
         pathMatch: 'full',
       },
     ],
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/home',
     pathMatch: 'full',
   },
 ];

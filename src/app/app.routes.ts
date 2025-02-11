@@ -1,8 +1,23 @@
 import { Routes } from '@angular/router';
+import { authGuard } from './auth.guard';
 
 export const routes: Routes = [
   {
-    path: '',
+   path: '',
+   redirectTo: 'first-page',
+   pathMatch: 'full'
+  },
+  {
+    path: 'tabs',
     loadChildren: () => import('./tabs/tabs.routes').then((m) => m.routes),
+    canActivate: [authGuard],
+  },
+  {
+    path: 'first-page',
+    loadComponent: () => import('./pages/first-page/first-page.page').then( m => m.FirstPagePage)
+  },
+  {
+    path: 'login',
+    loadComponent: () => import('./pages/login/login.page').then( m => m.LoginPage)
   },
 ];
