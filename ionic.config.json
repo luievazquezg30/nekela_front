@@ -1,0 +1,7 @@
+{
+  "name": "Nekela",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
