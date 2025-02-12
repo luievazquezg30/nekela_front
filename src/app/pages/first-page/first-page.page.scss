@@ -1,0 +1,21 @@
+ion-content{
+    --background: unset;
+    background-image: url('/assets/images/nekela-background.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+ion-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.footer{
+    --background: transparent;
+}
+.logo{
+    width: 200px;
+}

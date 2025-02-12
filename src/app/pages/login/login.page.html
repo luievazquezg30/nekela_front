@@ -1,13 +1,13 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Login</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="ion-padding custom-padding">
+    <ion-img src="/assets/images/logo-dark.png" class="logo"></ion-img>
+    <ion-row class="ion-justify-content-start w-full">
+      <h5 class="ion-text-left">Iniciar Sesión</h5>
+    </ion-row>
+    <ion-input required formControlName="email" placeholder="Correo electrónico" type="text"></ion-input>
+    <ion-input required formControlName="password" type="password" placeholder="Contraseña"></ion-input>
+    <ion-button class="secondary" type="submit" expand="block" shape="round" [disabled]="loginForm.invalid">
+      Ingresar
+    </ion-button>
+  </form>
 </ion-content>

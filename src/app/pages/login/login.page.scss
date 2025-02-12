@@ -1,0 +1,19 @@
+form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    ion-button{
+        width: 100%;
+        margin-top: 2.5rem;
+    }
+    ion-img{
+        margin-bottom: 5rem;
+    }
+}
+.logo{
+    width: 160px;
+}

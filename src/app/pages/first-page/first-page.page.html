@@ -1,13 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>FirstPage</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">FirstPage</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid class="h-full">
+    <ion-row class="ion-justify-content-center align-items-center h-full">
+      <ion-img class="logo" src="/assets/images/logo-white.png"></ion-img>
+    </ion-row>
+  </ion-grid>
+  <div class="ion-padding footer custom-padding absolute bottom-0 w-full">
+    <ion-button href="/login" expand="block" shape="round" class="primary">
+      Inciar Sesión
+    </ion-button>
+  </div>
 </ion-content>
