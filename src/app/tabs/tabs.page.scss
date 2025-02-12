@@ -1,1 +1,13 @@
-
+ion-tab-bar{
+    --background: var(--primary);
+    padding-top: 1rem;
+    padding-bottom: 1.3rem;
+}
+ion-tab-button{
+    --background: transparent;
+    --color-selected: var(--secondary);
+    --color: var(--gray);
+}
+.icon{
+    width: 27px;
+}
