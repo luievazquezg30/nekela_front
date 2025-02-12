@@ -1,13 +1,23 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Home</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="header">
+    <ion-img src="assets/images/logo-white.png"></ion-img>
+  </div>
+  <ion-footer>
+    <div class="container">
+      <ion-card class="header ion-no-margin">
+        <ion-img src="assets/images/image-1.png"></ion-img>
+        <div class="card-details">
+          <p class="title ion-no-margin">Nekela Plan</p>
+          <p class="subtitle ion-no-margin">Plan Pro</p>
+          <a class="ion-no-margin">Ver plan</a>
+        </div>
+      </ion-card>
+      <h6>Métricas De Comportamiento</h6>
+    </div>
+    <app-task-carousel></app-task-carousel>
+    <div class="container">
+      <h6>Cómunicación Con Empresa</h6>
+    </div>
+    <app-capabilities-carousel></app-capabilities-carousel>
+  </ion-footer>
 </ion-content>

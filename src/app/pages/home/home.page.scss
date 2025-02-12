@@ -1,0 +1,68 @@
+.header{
+    --background: unset;
+    background-image: url('/assets/images/nekela-background.jpeg');
+    background-position: center;
+    background-size: cover;
+    height: 50%;
+}
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary);
+    opacity: 0.7;
+    z-index: 1;
+}
+ion-footer{
+    background: var(--white);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: absolute;
+    bottom: 0;
+    padding-bottom:7rem;
+    height: 60%;
+    .container{
+        padding: 1.5rem;
+    }
+    h6{
+        margin: 0;
+    }
+    ion-card.header{
+        box-shadow: none !important;
+        display: flex;
+        align-items: center;
+        background: var(--primary-light-shadow);
+        height: max-content;
+        width: 100%;
+        margin-bottom: 2rem;
+        ion-img{
+            width: 70px;
+            margin-left: 1.5rem;
+            margin-right: 1rem;
+        }
+        div.card-details{
+            padding: 1rem;
+        }
+        div.card-details 
+        p.title{
+            font-size: var(--small);
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 0.3rem;
+        }
+        p.subtitle{
+            font-size: var(--xlarge);
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+        a{
+            color: var(--priamry);
+            font-weight: 600;
+            border-bottom: 1px solid var(--primary);
+        }
+    }
+}

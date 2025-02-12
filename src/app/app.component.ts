@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { notificationsOutline } from 'ionicons/icons';
+import { checkmarkSharp, notificationsOutline, timeOutline, exitOutline, chevronForwardSharp } from 'ionicons/icons';
 const shield = 'assets/icons/shield.svg';
 const person = 'assets/icons/person.svg';
 
@@ -12,6 +12,6 @@ const person = 'assets/icons/person.svg';
 })
 export class AppComponent {
   constructor() {
-    addIcons({'shield': shield, notificationsOutline, 'person': person});
+    addIcons({'shield': shield, notificationsOutline, 'person': person, checkmarkSharp, timeOutline, exitOutline, chevronForwardSharp});
   }
 }
