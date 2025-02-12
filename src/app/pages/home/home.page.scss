@@ -1,11 +1,41 @@
-.header{
+div.header{
     --background: unset;
     background-image: url('/assets/images/nekela-background.jpeg');
     background-position: center;
     background-size: cover;
     height: 50%;
+    padding: 1.5rem;
+    padding-top: var(--home-padding-top);
+    p{
+        color: var(--white);
+        position: relative;
+        font-weight: 400;
+    }
+    h2{
+        position: relative;
+        color: var(--white);
+        font-weight: 400;
+        font-size: var(--xlarge);
+    }
+    h1{
+        position: relative;
+        color: var(--white);
+        font-weight: bold;
+        font-size: var(--xlarge);
+        margin-bottom: 0.8rem;
+    }
+    ion-img{
+        width: 90px;
+        position: relative;
+        margin-bottom: 4rem;
+    }
+    ion-item-divider{
+        min-height: 1.5px;
+        max-width:115px;
+        opacity: 0.7;
+    }
 }
-.header::before{
+div.header::before{
     content: '';
     position: absolute;
     top: 0;
@@ -14,7 +44,7 @@
     bottom: 0;
     background-color: var(--primary);
     opacity: 0.7;
-    z-index: 1;
+    z-index: 0;
 }
 ion-footer{
     background: var(--white);
@@ -22,7 +52,7 @@ ion-footer{
     border-top-right-radius: 30px;
     position: absolute;
     bottom: 0;
-    padding-bottom:7rem;
+    padding-bottom:6rem;
     height: 60%;
     .container{
         padding: 1.5rem;
@@ -66,3 +96,14 @@ ion-footer{
         }
     }
 }
+ion-footer {
+    transition: all 0.3s ease-in-out;
+  
+    &.footer-grow {
+      height: 70%;
+    }
+  
+    &.footer-shrink {
+      height: 60%;
+    }
+  }

@@ -1,8 +1,14 @@
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" [scrollY]="false">
   <div class="header">
     <ion-img src="assets/images/logo-white.png"></ion-img>
+    <div class="desc">
+      <h2 class="ion-no-margin">Buen día,</h2>
+      <h1 class="ion-no-margin">José Carlos</h1>
+      <ion-item-divider/>
+      <p class="subtitle">Tu Nekela ID es: XXXXXX</p>
+    </div>
   </div>
-  <ion-footer>
+  <ion-footer #footer>
     <div class="container">
       <ion-card class="header ion-no-margin">
         <ion-img src="assets/images/image-1.png"></ion-img>
