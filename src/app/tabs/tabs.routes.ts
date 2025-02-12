@@ -4,7 +4,7 @@ import { authGuard } from '../auth.guard';
 
 export const routes: Routes = [
   {
-    path: 'tabs',
+    path: '',
     component: TabsPage,
     children: [
       {
