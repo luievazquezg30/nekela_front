@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonFooter, IonCard, IonImg, IonItemDivider, GestureController, GestureDetail } from '@ionic/angular/standalone';
 import { TaskCarouselComponent } from "../../components/task-carousel/task-carousel.component";
 import { CapabilitiesCarouselComponent } from "../../components/capabilities-carousel/capabilities-carousel.component";
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -14,7 +15,12 @@ import { CapabilitiesCarouselComponent } from "../../components/capabilities-car
 export class HomePage implements OnInit {
   @ViewChild(IonContent) content!: ElementRef<HTMLIonContentElement>
   @ViewChild('footer', {read: ElementRef}) footer!: ElementRef;
-  constructor(private renderer: Renderer2, private gestureCtrl: GestureController, private cdRef: ChangeDetectorRef) { }
+  constructor(
+    private renderer: Renderer2,
+    private gestureCtrl: GestureController,
+    private cdRef: ChangeDetectorRef,
+    private route: Router
+  ) { }
 
   ngOnInit() {
   }
@@ -52,5 +58,9 @@ export class HomePage implements OnInit {
       this.renderer.removeClass(this.footer.nativeElement, 'footer-grow');
     }
   }
+
+  goToSubscription() {
+    this.route.navigate(['/subscription']);
+  } 
 
 }

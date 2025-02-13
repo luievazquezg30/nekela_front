@@ -45,9 +45,16 @@
 }
 :root[mode=ios] {
     --home-padding-top: 4rem;
+    ion-button.back{
+        width: 2.5rem!important;
+        height: 2.5rem!important;
+    }
 }
 :root[mode=md] {
-    
+    ion-button.back{
+        width: 2.5rem!important;
+        height: 2.9rem!important;
+    }
 }
 ion-button.primary{
     height: 3rem;
@@ -64,6 +71,23 @@ ion-button.secondary{
     --background-hover: var(--secondary);
     --background-activated: var(--secondary);
     color: var(--black);
+}
+ion-button.yellow{
+    height: 3rem;
+    --background: var(--yellow);
+    --bacground-activated: var(--yellow);
+    --background-focused: var(--yellow);
+    --background-hover: var(--yellow);
+    --background-activated: var(--yellow);
+    color: var(--black);
+}
+ion-button.back{
+    --color: var(--black);
+    border: 0.5px solid var(--gray);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 ion-input{
     border: 1px solid var(--gray)!important;

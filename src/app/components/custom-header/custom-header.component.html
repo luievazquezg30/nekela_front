@@ -1,0 +1,10 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="back back-absolute" (click)="back()">
+        <ion-icon slot="icon-only" size="small" name="chevron-back-outline" class="text-black"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title slot="start" class="text-black text-sm font-bold" *ngIf="title">{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>

@@ -1,0 +1,17 @@
+ion-header{
+    ion-toolbar{
+        border-top: 1.5rem solid var(--white)!important;
+        --background: var(--white)!important;
+        height: auto!important;
+        ion-title{
+            padding-inline-start: 90px;
+        }
+    }
+    ion-toolbar.md{
+        padding-top: 0rem!important;
+    }
+}
+.back-absolute{
+    position: absolute;
+    left: 1rem;
+}
