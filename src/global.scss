@@ -45,16 +45,9 @@
 }
 :root[mode=ios] {
     --home-padding-top: 4rem;
-    ion-button.back{
-        width: 2.5rem!important;
-        height: 2.5rem!important;
-    }
 }
 :root[mode=md] {
-    ion-button.back{
-        width: 2.5rem!important;
-        height: 2.9rem!important;
-    }
+
 }
 ion-button.primary{
     height: 3rem;
@@ -97,6 +90,8 @@ ion-button.back{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 2.5rem!important;
+    height: 2.5rem!important;
 }
 ion-input{
     border: 1px solid var(--gray)!important;
