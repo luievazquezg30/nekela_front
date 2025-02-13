@@ -31,6 +31,7 @@ export class HomePage implements OnInit {
         el: this.footer.nativeElement,
         gestureName: 'swipe-footer',
         threshold: 0,
+        direction: 'y',
         onStart: () => {
           this.cdRef.detectChanges();
         },
