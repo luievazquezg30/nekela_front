@@ -1,13 +1,46 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Account</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="true" style="--background: #f0f0f0;">
+  <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">Account</ion-title>
+      <div style="display: flex; align-items: center; justify-content: center; position: relative; width: 100%;">
+        <ion-icon class="backArrow" name="chevron-back-outline"></ion-icon>
+      </div>
     </ion-toolbar>
   </ion-header>
+
+  <div style="margin-top: 15%; margin-bottom: 15%;">
+    <ion-card class="rounded-img">
+      <ion-img src="assets/images/image-2.png" alt="Descripción de la imagen"></ion-img>
+    </ion-card>
+    <div class="datos">
+      <p class="name">Jose Carlos C. <br><br>
+        <span class="phoneNumber">
+          <strong>+52 669 320 8977</strong>
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <div class="menu">
+    <ion-card>
+      <ion-list lines="inset">
+        <ion-item style="padding-top: 5%;">
+          <ion-icon slot="start" class="sizeIcon" name="person-outline"></ion-icon>
+          <ion-label>Mi Perfil</ion-label>
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+  
+        <ion-item>
+          <ion-icon slot="start" class="sizeIcon" name="gift-outline"></ion-icon>
+          <ion-label>Términos y Condiciones</ion-label>
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+  
+        <ion-item>
+          <ion-icon slot="start" class="sizeIcon" name="log-out-outline"></ion-icon>
+          <ion-label>Cerrar Sesión</ion-label>
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </div>
 </ion-content>
