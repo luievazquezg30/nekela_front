@@ -24,4 +24,8 @@ export const routes: Routes = [
     path: 'subscription',
     loadComponent: () => import('./pages/subscription/subscription.page').then( m => m.SubscriptionPage)
   },
+  {
+    path: 'working-day',
+    loadComponent: () => import('./pages/working-day/working-day.page').then( m => m.WorkingDayPage)
+  },
 ];

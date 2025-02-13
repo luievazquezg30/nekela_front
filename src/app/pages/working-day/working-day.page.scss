@@ -1,0 +1,79 @@
+ion-card.header{
+    box-shadow: none !important;
+    display: flex;
+    align-items: center;
+    background: var(--primary-light-shadow);
+    height: max-content;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    ion-img{
+        width: 90px;
+        margin-left: 1.5rem;
+        margin-right: 0.5rem;
+    }
+    div.card-details{
+        padding: 1rem;
+    }
+    div.card-details 
+    p.title{
+        font-size: var(--xlarge);
+        color: var(--primary);
+        font-weight: bold;
+        margin-bottom: 0.3rem;
+    }
+    p.subtitle{
+        color: var(--primary);
+        font-size: var(--small);
+    }
+}
+ion-select.custom{
+    width: 100%;
+    border: 1px solid var(--gray-light);
+    border-radius: 40px;
+    padding-inline-start: 1.5rem;
+    padding-inline-end: 1.5rem;
+    font-size: var(--medium);
+    min-height: 0!important;
+    height: 2.7rem;
+    --padding-bottom: 4px;
+}
+ion-select::part(icon) {
+    content: url('/assets/icons/chevron-down.svg');
+    width: 1rem;;
+}
+ion-list{
+    margin-top: 1rem;
+    ion-item{
+        border-bottom: 1px solid var(--gray-light);
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        ion-icon{
+            width: 1.5rem;
+            height: 1.5rem;
+            padding: 0.5rem;
+            border-radius: 100%;
+            color: var(--primary);
+            background: var(--primary-light-shadow);
+        }
+        div.body{
+            align-items: center;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        p{
+            font-size: var(--normal);
+            color: var(--black);
+        }
+        p.subtitle{
+            font-size: var(--small);
+            font-weight: lighter;
+            margin-top: 0.4rem;
+        }
+        p.hours{
+            color: var(--primary);
+            font-size: var(--normal);
+        }
+    }
+}

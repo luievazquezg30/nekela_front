@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IonIcon } from '@ionic/angular/standalone';
 import { ModalController} from '@ionic/angular/standalone';
 import { ConfirmComponent } from '../confirm/confirm.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-task-carousel',
@@ -11,7 +12,7 @@ import { ConfirmComponent } from '../confirm/confirm.component';
 })
 export class TaskCarouselComponent  implements OnInit {
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController, private route: Router) { }
 
   ngOnInit() {}
 
@@ -49,6 +50,10 @@ export class TaskCarouselComponent  implements OnInit {
         }
       });
     });
+  }
+
+  workingDay(){
+    this.route.navigate(['/working-day']);
   }
 
 }
