@@ -81,6 +81,15 @@ ion-button.yellow{
     --background-activated: var(--yellow);
     color: var(--black);
 }
+ion-button.gray{
+    height: 3rem;
+    --background: var(--gray);
+    --bacground-activated: var(--gray);
+    --background-focused: var(--gray);
+    --background-hover: var(--gray);
+    --background-activated: var(--gray);
+    color: var(--black);
+}
 ion-button.back{
     --color: var(--black);
     border: 0.5px solid var(--gray);
@@ -99,6 +108,9 @@ ion-input{
     --padding-start: 1.2rem!important;
     --padding-end: 1.2rem!important;
     --padding: 1.2rem!important;
+}
+ion-modal{
+    --background: transparent;
 }
 .bottom-0{
     bottom: 0;
