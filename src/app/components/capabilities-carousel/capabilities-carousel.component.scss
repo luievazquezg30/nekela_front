@@ -17,9 +17,12 @@
         display: flex;
         align-items: center;
         box-shadow: none !important;
+        ion-img{
+            object-fit: cover;
+        }
         ion-img::part(image){
-            width: 5.5rem;
-            height: 5.5rem;
+            width: 90px;
+            height: 90px;
             border-radius: 10px;
         }
         .card-body{
@@ -35,7 +38,7 @@
             .link{
                 display: flex;
                 align-items: center;
-                margin-top: 0.2rem;
+                margin-top: 0.3rem;
                 p{
                     color: var(--primary);
                     font-size: var(--small);
