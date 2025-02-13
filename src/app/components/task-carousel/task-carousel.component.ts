@@ -56,4 +56,8 @@ export class TaskCarouselComponent  implements OnInit {
     this.route.navigate(['/working-day']);
   }
 
+  surveys(){
+    this.route.navigate(['/surveys']);
+  }
+
 }

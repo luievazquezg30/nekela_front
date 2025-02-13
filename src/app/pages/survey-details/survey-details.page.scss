@@ -1,0 +1,21 @@
+ion-list{
+    margin-top: 2rem;
+    div.item{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        ion-label{
+            font-size: var(--medium);
+            margin-right: 0px;
+            p{
+                color: var(--black);
+            }
+        }
+    }
+}
+div.response{
+    background: var(--success);
+    padding: 1.2rem;
+    margin-top: 1.7rem;
+    border-radius: 10px;
+}

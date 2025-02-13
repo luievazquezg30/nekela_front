@@ -1,0 +1,15 @@
+<app-custom-header [title]="'Encuestas'"></app-custom-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-list>
+    <ion-item lines="none" *ngFor="let i of [1,2,3,4]">
+      <ion-icon slot="start" name="time-outline"></ion-icon>
+      <div class="body">
+        <div class="desc">
+          <p class="ion-no-margin">Desempeño Semanal</p>
+          <p class="subtitle ion-no-margin">Instructor: Juan Torres</p>
+        </div>
+        <p class="ion-no-margin hours" (click)="details()">Ver Más</p>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

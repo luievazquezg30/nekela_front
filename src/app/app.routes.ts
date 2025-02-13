@@ -28,4 +28,12 @@ export const routes: Routes = [
     path: 'working-day',
     loadComponent: () => import('./pages/working-day/working-day.page').then( m => m.WorkingDayPage)
   },
+  {
+    path: 'surveys',
+    loadComponent: () => import('./pages/surveys/surveys.page').then( m => m.SurveysPage)
+  },
+  {
+    path: 'survey-details',
+    loadComponent: () => import('./pages/survey-details/survey-details.page').then( m => m.SurveyDetailsPage)
+  },
 ];
