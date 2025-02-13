@@ -20,10 +20,9 @@ export class HomePage implements OnInit {
   }
 
   ionViewDidEnter() {
-    console.log('ionViewDidEnter', this.footer.nativeElement);
     if(this.footer.nativeElement){
       const gesture = this.gestureCtrl.create({
-        el: this.footer.nativeElement, // Detecta el gesto en toda la pantalla
+        el: this.footer.nativeElement,
         gestureName: 'swipe-footer',
         threshold: 0,
         onStart: () => {
@@ -45,7 +44,6 @@ export class HomePage implements OnInit {
 
 
   handleGesture(event: GestureDetail) {
-    console.log(event);
     if (event.deltaY < 30) {
       this.renderer.addClass(this.footer.nativeElement, 'footer-grow');
       this.renderer.removeClass(this.footer.nativeElement, 'footer-shrink');
