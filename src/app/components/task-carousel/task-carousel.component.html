@@ -1,7 +1,7 @@
 <div class="carousel-main">
   <div class="carousel-container">
     <div class="task-carousel">
-      <div class="task-card start" (click)="openModal()">
+      <div class="task-card start" (click)="startWorkSession()">
         <div class="desc-container">
           <ion-icon slot="icon-only" name="checkmark-sharp"></ion-icon>
           <p class="desc ion-no-margin">
@@ -9,7 +9,7 @@
           </p>
         </div>
       </div>
-      <div class="task-card stop">
+      <div class="task-card stop" (click)="finishWorkSession()">
         <div class="desc-container">
           <ion-icon slot="icon-only" name="exit-outline"></ion-icon>
           <p class="desc ion-no-margin">

@@ -15,7 +15,7 @@ export class TaskCarouselComponent  implements OnInit {
 
   ngOnInit() {}
 
-  openModal(){
+  startWorkSession(){
     this.modalCtrl.create({
       component: ConfirmComponent,
       componentProps: {
@@ -26,6 +26,24 @@ export class TaskCarouselComponent  implements OnInit {
       modal.onDidDismiss().then((data) => {
         if(data.data.confirm){
           console.log('Jornada iniciada');
+        }else{
+          console.log('Jornada cancelada');
+        }
+      });
+    });
+  }
+
+  finishWorkSession(){
+    this.modalCtrl.create({
+      component: ConfirmComponent,
+      componentProps: {
+        title: '¿Quieres registrar tu salida?',
+      }
+    }).then((modal) => {
+      modal.present();
+      modal.onDidDismiss().then((data) => {
+        if(data.data.confirm){
+          console.log('Jornada finalizada');
         }else{
           console.log('Jornada cancelada');
         }
