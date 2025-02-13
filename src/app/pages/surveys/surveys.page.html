@@ -12,4 +12,8 @@
       </div>
     </ion-item>
   </ion-list>
+  <ion-infinite-scroll [disabled]="false" position="bottom" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando más datos...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
