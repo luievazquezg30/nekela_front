@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonImg, IonCard, IonList, IonItem, IonIcon, IonButton } from '@ionic/angular/standalone';
+import { IonContent, IonImg, IonCard, IonList, IonItem, IonIcon, IonButton, ModalController } from '@ionic/angular/standalone';
 import { CustomHeaderComponent } from 'src/app/components/custom-header/custom-header.component';
+import { ReportPage } from '../report/report.page';
 
 @Component({
   selector: 'app-reports',
@@ -13,13 +14,17 @@ import { CustomHeaderComponent } from 'src/app/components/custom-header/custom-h
 })
 export class ReportsPage implements OnInit {
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
 
   ngOnInit() {
   }
 
   startReport() {
-    console.log('Start report');
+    this.modalCtrl.create({
+      component: ReportPage
+    }).then((modal) => {
+      modal.present();
+    });
   }
 
 }
