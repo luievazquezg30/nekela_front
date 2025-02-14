@@ -26,7 +26,7 @@
         <h6>Evidencia del evento:</h6>
         <ion-item class="ion-no-padding" lines="none" *ngFor="let i of [1,2,3,4,5]; let index;">
           <ion-icon slot="start" class="camera" name="camera-outline" *ngIf="!fields['image' + index]"></ion-icon>
-          <ion-img [src]="fields.image1.webPath" class="preview" *ngIf="fields['image' + index]"/>
+          <ion-img [src]="fields['image' + index].webPath" class="preview" *ngIf="fields['image' + index]"/>
           <ion-label>Fotografía de evidencia</ion-label>
           <ion-button (click)="openCamera(index)" class="add-btn" *ngIf="!fields['image' + index]">
             <ion-icon slot="end" name="add-sharp"></ion-icon>
