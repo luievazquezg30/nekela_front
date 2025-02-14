@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonCard, IonImg, IonIcon } from '@ionic/angular/standalone';
 
 @Component({
@@ -9,8 +10,12 @@ import { IonCard, IonImg, IonIcon } from '@ionic/angular/standalone';
 })
 export class CapabilitiesCarouselComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit() {}
+
+  reports(){
+    this.route.navigate(['/reports']);
+  }
 
 }

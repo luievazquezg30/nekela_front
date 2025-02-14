@@ -1,0 +1,45 @@
+<app-custom-header [title]="'Reportes'"></app-custom-header>
+
+<ion-content [fullscreen]="true" class="ion-padding custom-padding">
+  <ion-card class="header ion-no-margin">
+    <ion-img src="assets/images/image-3.png"></ion-img>
+    <div class="card-details">
+      <p class="title ion-no-margin">Canal</p>
+      <p class="subtitle ion-no-margin">De Reportes</p>
+    </div>
+  </ion-card>
+  <h6 class="ion-no-margin">Proceso de Reporte</h6>
+  <ion-list>
+    <ion-item class="ion-no-padding lines" lines="none">
+      <ion-icon slot="start" name="checkmark-sharp"></ion-icon>
+      <div class="body">
+        <p class="ion-no-margin title">Información General</p>
+        <p class="ion-no-margin subtitle">Introduce los datos del evento</p>
+      </div>
+    </ion-item>
+    <ion-item class="ion-no-padding lines" lines="none">
+      <ion-icon slot="start" name="checkmark-sharp"></ion-icon>
+      <div class="body">
+        <p class="ion-no-margin title">Descripción del Evento</p>
+        <p class="ion-no-margin subtitle">Ingresa una descipción detallada</p>
+      </div>
+    </ion-item>
+    <ion-item class="ion-no-padding lines" lines="none">
+      <ion-icon slot="start" name="checkmark-sharp"></ion-icon>
+      <div class="body">
+        <p class="ion-no-margin title">Evidencias del Evento</p>
+        <p class="ion-no-margin subtitle">Toma algunas fotos como evidencia</p>
+      </div>
+    </ion-item>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-icon slot="start" name="checkmark-sharp"></ion-icon>
+      <div class="body">
+        <p class="ion-no-margin title">Envío y Notificaciones</p>
+        <p class="ion-no-margin subtitle">Envía la denuncia y espera una solución</p>
+      </div>
+    </ion-item>
+    <ion-button (click)="startReport()" expand="block" class="secondary" shape="round">
+      Reportar Incidente
+    </ion-button>
+  </ion-list>
+</ion-content>
