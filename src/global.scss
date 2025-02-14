@@ -48,7 +48,15 @@
     --modal-padding-top: 9rem;
 }
 :root[mode=md] {
-    
+    --modal-padding-top: 7rem;
+    --modal-close-btn-top: 3rem;
+}
+ion-button{
+    text-transform: none;
+    --box-shadow: none;
+}
+ion-card{
+    box-shadow: none;
 }
 ion-button.primary{
     height: 3rem;

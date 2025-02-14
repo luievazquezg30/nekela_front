@@ -1,5 +1,5 @@
 ion-content{
-    --padding-top: var( --modal-padding-top);
+    --padding-top: var(--modal-padding-top);
     --background: var(--gray-light-shadow);
     h1{
         font-size: var(--large-medium);
@@ -62,7 +62,7 @@ ion-content{
 ion-button.back{
     position: absolute;
     color: var(--black);
-    top: 5rem;
+    top: var(--modal-close-btn-top);
     left: 1rem;
     border: 0;
     display: flex;
