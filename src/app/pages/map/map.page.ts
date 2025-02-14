@@ -1,11 +1,12 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule, NgClass } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonButton, IonIcon } from '@ionic/angular/standalone';
+import { IonContent, IonButton, IonIcon, ModalController } from '@ionic/angular/standalone';
 import { NavController } from '@ionic/angular';
 import { Geolocation } from '@capacitor/geolocation';
 import * as L from 'leaflet';
 import { LocalService } from 'src/app/services/local.service';
+import { AlertComponent } from 'src/app/component/alert/alert.component';
 @Component({
   selector: 'app-map',
   templateUrl: './map.page.html',
@@ -28,7 +29,9 @@ export class MapPage implements OnInit {
   currentPosition: any;
   userMarker: any;
   step = 1;
-  constructor(private navCtrl: NavController, private localSvc: LocalService) { }
+  title = 'Rastreando tu ubicación.';
+  subtitle = 'Ubicación de trabajo';
+  constructor(private navCtrl: NavController, private localSvc: LocalService, private mmodalCtrl: ModalController) { }
 
   ngOnInit() {
   }
@@ -45,6 +48,23 @@ export class MapPage implements OnInit {
   fakeLoading() {
     const loading = setInterval(() => {
       this.step++;
+      if(this.step === 2){
+        this.title = 'Encontramos tu ubicación.';
+        this.subtitle = 'Ubicación actual';
+      }else if(this.step === 3){
+        this.mmodalCtrl.create({
+          component: AlertComponent,
+          componentProps: {
+            title: 'Registro exitoso',
+            message: 'Se registró tu asistencia con éxito en el punto de encuentro a las 08:57:34 AM',
+            icon: 'checkmark-sharp',
+            buttonText: 'Volver al Inicio',
+            route: '/tabs/home'
+          }
+        }).then((modal) => {
+          modal.present();
+        });
+      }
     }, 2000);
     if(this.step === 4){
       clearInterval(loading);

@@ -4,13 +4,13 @@
   </ion-button>
   <div #map id="map" class="map"></div>
   <div class="container">
-    <h5 class="ion-no-margin">Rastreando tu ubicación...</h5>
+    <h5 class="ion-no-margin">{{title}}</h5>
     <div class="progress-bar">
       <div class="item" [ngClass]="step > 0 ? 'active' : ''"></div>
       <div class="item" [ngClass]="step > 1 ? 'active' : ''"></div>
       <div class="item" [ngClass]="step > 2 ? 'active' : ''"></div>
     </div>
-    <h6 class="ion-no-maring">Ubicación de trabajo</h6>
+    <h6 class="ion-no-maring">{{subtitle}}</h6>
     <div class="location-desc">
       <p class="ion-no-margin">Blvd. Puerta de Hierro 5153, Zapopan</p>
     </div>
