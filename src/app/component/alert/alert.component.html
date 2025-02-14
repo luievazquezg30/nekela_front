@@ -1,0 +1,10 @@
+<div class="container">
+  <ion-icon slot="icon-only" [name]="icon"></ion-icon>
+  <h5 class="ion-no-margin">{{title}}</h5>
+  <div class="message-container">
+    <p>{{message}}</p>
+  </div>
+  <ion-button expand="block" class="secondary" shape="round" (click)="confirm()">
+    {{buttonText}}
+  </ion-button>
+</div>

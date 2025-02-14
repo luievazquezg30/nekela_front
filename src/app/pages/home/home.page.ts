@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, ElementRef, OnInit, Renderer2, viewChild, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonFooter, IonCard, IonImg, IonItemDivider, GestureController, GestureDetail } from '@ionic/angular/standalone';
+import { IonContent, IonFooter, IonCard, IonImg, IonItemDivider, GestureController, GestureDetail, ModalController } from '@ionic/angular/standalone';
 import { TaskCarouselComponent } from "../../components/task-carousel/task-carousel.component";
 import { CapabilitiesCarouselComponent } from "../../components/capabilities-carousel/capabilities-carousel.component";
 import { Router } from '@angular/router';
@@ -19,7 +19,8 @@ export class HomePage implements OnInit {
     private renderer: Renderer2,
     private gestureCtrl: GestureController,
     private cdRef: ChangeDetectorRef,
-    private route: Router
+    private route: Router,
+    private modalCtrl: ModalController
   ) { }
 
   ngOnInit() {
@@ -62,6 +63,6 @@ export class HomePage implements OnInit {
 
   goToSubscription() {
     this.route.navigate(['/subscription']);
-  } 
+  }
 
 }

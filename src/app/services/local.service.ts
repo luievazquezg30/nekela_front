@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
 import { CacheService } from './cache.service';
-
+import {ToastController} from '@ionic/angular';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +13,8 @@ export class LocalService {
   token!: string;
   constructor(
     private storage: Storage,
-    private cacheSvc: CacheService
+    private cacheSvc: CacheService,
+    private toastCtrl: ToastController,
   ) {
     this.init().then(() => {
         this.loadToken();
@@ -43,5 +44,14 @@ export class LocalService {
   async clearStorage() {
     this.cacheSvc.cleaar();
     return this.storage.clear();
+  }
+
+  async showToast(message: string,position: 'top' | 'bottom' | 'middle' = 'top', duration?: number){
+    const toast = await this.toastCtrl.create({
+      message,
+      position,
+      duration:duration || 3000
+    });
+    toast.present();
   }
 }
