@@ -49,5 +49,11 @@
 	<string>La localización es requerida para mostrar tu ubicación al consultar el mapa durante el inicio y finalización de jornada.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>La localización es requerida para mostrar tu ubicación al consultar el mapa durante el incio y finalización de jornada.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Necesitamos acceso a tu cámara para tomar fotografías que puedes establecer como foto de perfil y/o adjuntar en reportes. </string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Necesitamos acceso a tu librería de fotos para seleccionar fotografías que puedes establecer como foto de perfil y/o adjuntar en reportes. </string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Necesitamos acceso a tu librería de fotos para seleccionar fotografías que puedes establecer como foto de perfil y/o adjuntar en reportes. </string>
 </dict>
 </plist>
