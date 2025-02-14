@@ -45,9 +45,10 @@
 }
 :root[mode=ios] {
     --home-padding-top: 4rem;
+    --modal-padding-top: 9rem;
 }
 :root[mode=md] {
-
+    
 }
 ion-button.primary{
     height: 3rem;
