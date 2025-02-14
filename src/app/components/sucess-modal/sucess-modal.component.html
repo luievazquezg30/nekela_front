@@ -1,0 +1,19 @@
+<div class="container ion-padding">
+  <div class="header">
+    <ion-button (click)="dimiss()" expand="block" class="back" shape="round" *ngIf="!route">
+      <ion-icon slot="icon-only" name="close-sharp"></ion-icon>
+    </ion-button>
+  </div>
+  <div class="body">
+    <ion-icon slot="icon-only" [name]="icon"></ion-icon>
+    <div class="title">
+      <h2>{{title}}</h2>
+    </div>
+    <div class="message">
+      {{message}}
+    </div>
+    <ion-button (click)="dimiss()" expand="block" class="secondary" shape="round">
+      {{buttonText}}
+    </ion-button>
+  </div>
+</div>
