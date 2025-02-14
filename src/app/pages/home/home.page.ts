@@ -15,13 +15,13 @@ import { Router } from '@angular/router';
 export class HomePage implements OnInit {
   @ViewChild(IonContent) content!: ElementRef<HTMLIonContentElement>
   @ViewChild('footer', {read: ElementRef}) footer!: ElementRef;
-  constructor(
-    private renderer: Renderer2,
-    private gestureCtrl: GestureController,
-    private cdRef: ChangeDetectorRef,
-    private route: Router,
-    private modalCtrl: ModalController
-  ) { }
+   constructor(
+      private renderer: Renderer2,
+      private gestureCtrl: GestureController,
+      private cdRef: ChangeDetectorRef,
+      private route: Router,
+      private modalCtrl: ModalController
+    ) { }
 
   ngOnInit() {
   }
@@ -60,9 +60,7 @@ export class HomePage implements OnInit {
       this.renderer.removeClass(this.footer.nativeElement, 'footer-grow');
     }
   }
-
-  goToSubscription() {
+goToSubscription() {
     this.route.navigate(['/subscription']);
   }
-
 }
