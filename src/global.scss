@@ -47,7 +47,7 @@
     --home-padding-top: 4rem;
 }
 :root[mode=md] {
-    
+
 }
 ion-button.primary{
     height: 3rem;
@@ -62,7 +62,36 @@ ion-button.secondary{
     --bacground-activated: var(--secondary);
     --background-focused: var(--secondary);
     --background-hover: var(--secondary);
+    --background-activated: var(--secondary);
     color: var(--black);
+}
+ion-button.yellow{
+    height: 3rem;
+    --background: var(--yellow);
+    --bacground-activated: var(--yellow);
+    --background-focused: var(--yellow);
+    --background-hover: var(--yellow);
+    --background-activated: var(--yellow);
+    color: var(--black);
+}
+ion-button.gray{
+    height: 3rem;
+    --background: var(--gray);
+    --bacground-activated: var(--gray);
+    --background-focused: var(--gray);
+    --background-hover: var(--gray);
+    --background-activated: var(--gray);
+    color: var(--black);
+}
+ion-button.back{
+    --color: var(--black);
+    border: 0.5px solid var(--gray);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem!important;
+    height: 2.5rem!important;
 }
 ion-input{
     border: 1px solid var(--gray)!important;
@@ -74,6 +103,9 @@ ion-input{
     --padding-start: 1.2rem!important;
     --padding-end: 1.2rem!important;
     --padding: 1.2rem!important;
+}
+ion-modal{
+    --background: transparent;
 }
 .bottom-0{
     bottom: 0;

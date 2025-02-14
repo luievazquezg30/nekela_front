@@ -1,0 +1,29 @@
+ion-card{
+    text-align: center;
+    color: var(--black);
+    background: var(--gray);
+    border-radius: 30px;
+    padding: 1rem;
+    ion-button{
+        margin-top: 0.5rem;
+        width: 90%;
+    }
+    h2{
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+    ul{
+        text-align: left;
+        li{
+            font-size: var(--medium);
+            margin: 0.3rem 0;
+        }
+    }
+    ul li::marker{
+        color: var(--yellow);
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: var(--small);
+    }
+}

@@ -1,0 +1,35 @@
+<app-custom-header [title]="'Conteo de Horas'"></app-custom-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card class="header ion-no-margin">
+    <ion-img src="assets/images/image-2.png"></ion-img>
+    <div class="card-details">
+      <p class="title ion-no-margin">¡Excelente!</p>
+      <p class="subtitle ion-no-margin">40 horas en total esta semena</p>
+    </div>
+  </ion-card>
+  <ion-row class="ion-justify-content-center filter">
+    <ion-select class="custom" placeholder="Horas por mes" label-placement="stacked">
+      <ion-select-option value="día">Horas por día</ion-select-option>
+      <ion-select-option value="semana">Horas por semena</ion-select-option>
+      <ion-select-option value="mes">Horas por mes</ion-select-option>
+      <ion-select-option value="año">Horas por año</ion-select-option>
+    </ion-select>
+  </ion-row>
+  <ion-list>
+    <ion-item lines="none" *ngFor="let i of [1,2,3,4,5,6,7,8]">
+      <ion-icon slot="start" name="time-outline"></ion-icon>
+      <div class="body">
+        <div class="desc">
+          <p class="ion-no-margin">Noviembre 2024</p>
+          <p class="subtitle ion-no-margin">En Proceso</p>
+        </div>
+        <p class="ion-no-margin hours">82 Horas</p>
+      </div>
+    </ion-item>
+  </ion-list>
+  <ion-infinite-scroll [disabled]="false" position="bottom" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando más datos..">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

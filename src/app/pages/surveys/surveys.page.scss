@@ -1,0 +1,35 @@
+ion-list{
+    margin-top: 1rem;
+    ion-item{
+        border-bottom: 1px solid var(--gray-light);
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        ion-icon{
+            width: 1.5rem;
+            height: 1.5rem;
+            padding: 0.5rem;
+            border-radius: 100%;
+            color: var(--primary);
+            background: var(--primary-light-shadow);
+        }
+        div.body{
+            align-items: center;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        p{
+            font-size: var(--normal);
+            color: var(--black);
+        }
+        p.subtitle{
+            font-size: var(--small);
+            font-weight: lighter;
+            margin-top: 0.4rem;
+        }
+        p.hours{
+            color: var(--primary);
+            font-size: var(--normal);
+        }
+    }
+}

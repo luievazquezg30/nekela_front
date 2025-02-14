@@ -1,9 +1,10 @@
 import { ChangeDetectorRef, Component, ElementRef, OnInit, Renderer2, viewChild, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonFooter, IonCard, IonImg, IonItemDivider, GestureController, GestureDetail } from '@ionic/angular/standalone';
+import { IonContent, IonFooter, IonCard, IonImg, IonItemDivider, GestureController, GestureDetail, ModalController } from '@ionic/angular/standalone';
 import { TaskCarouselComponent } from "../../components/task-carousel/task-carousel.component";
 import { CapabilitiesCarouselComponent } from "../../components/capabilities-carousel/capabilities-carousel.component";
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -14,18 +15,24 @@ import { CapabilitiesCarouselComponent } from "../../components/capabilities-car
 export class HomePage implements OnInit {
   @ViewChild(IonContent) content!: ElementRef<HTMLIonContentElement>
   @ViewChild('footer', {read: ElementRef}) footer!: ElementRef;
-  constructor(private renderer: Renderer2, private gestureCtrl: GestureController, private cdRef: ChangeDetectorRef) { }
+   constructor(
+      private renderer: Renderer2,
+      private gestureCtrl: GestureController,
+      private cdRef: ChangeDetectorRef,
+      private route: Router,
+      private modalCtrl: ModalController
+    ) { }
 
   ngOnInit() {
   }
 
   ionViewDidEnter() {
-    console.log('ionViewDidEnter', this.footer.nativeElement);
     if(this.footer.nativeElement){
       const gesture = this.gestureCtrl.create({
-        el: this.footer.nativeElement, // Detecta el gesto en toda la pantalla
+        el: this.footer.nativeElement,
         gestureName: 'swipe-footer',
-        threshold: 0,
+        threshold: 70,
+        direction: 'y',
         onStart: () => {
           this.cdRef.detectChanges();
         },
@@ -45,7 +52,6 @@ export class HomePage implements OnInit {
 
 
   handleGesture(event: GestureDetail) {
-    console.log(event);
     if (event.deltaY < 30) {
       this.renderer.addClass(this.footer.nativeElement, 'footer-grow');
       this.renderer.removeClass(this.footer.nativeElement, 'footer-shrink');
@@ -54,5 +60,7 @@ export class HomePage implements OnInit {
       this.renderer.removeClass(this.footer.nativeElement, 'footer-grow');
     }
   }
-
+goToSubscription() {
+    this.route.navigate(['/subscription']);
+  }
 }

@@ -20,4 +20,24 @@ export const routes: Routes = [
     path: 'login',
     loadComponent: () => import('./pages/login/login.page').then( m => m.LoginPage)
   },
+  {
+    path: 'subscription',
+    loadComponent: () => import('./pages/subscription/subscription.page').then( m => m.SubscriptionPage)
+  },
+  {
+    path: 'working-day',
+    loadComponent: () => import('./pages/working-day/working-day.page').then( m => m.WorkingDayPage)
+  },
+  {
+    path: 'surveys',
+    loadComponent: () => import('./pages/surveys/surveys.page').then( m => m.SurveysPage)
+  },
+  {
+    path: 'survey-details',
+    loadComponent: () => import('./pages/survey-details/survey-details.page').then( m => m.SurveyDetailsPage)
+  },
+  {
+    path: 'map',
+    loadComponent: () => import('./pages/map/map.page').then( m => m.MapPage)
+  },
 ];

@@ -1,0 +1,30 @@
+<app-custom-header></app-custom-header>
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <h2>Básico</h2>
+    <ul>
+      <li>Atención Médica Telefónica 24/7</li>
+      <li>Asesoría Nutricional</li>
+      <li>Asesoría Psicológica</li>
+      <li>Cabina de Urgencias Médicas</li>
+      <li>Cobertura Nacional</li>
+      <li>Red Médica</li>
+      <li>Expediente clínico electrónico</li>
+      <li>Receta digital</li>
+      <li>Médico a domicilio y home care</li>
+      <li>Concierge Médico</li>
+    </ul>
+    <ion-row class="ion-justify-content-center">
+      <ion-button (click)="call()" expand="block" class="yellow" shape="round">
+        Llamar a la línea
+      </ion-button>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="10">
+        <p>
+          Ten tu Nekela ID a la mano, vas a necesitarlo en caso de solicitar un servicio. Tú Nekela ID es: XXXXXX
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

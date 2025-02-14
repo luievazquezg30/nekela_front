@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-        <string>Nekela</string>
+	<string>Nekela</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -45,5 +45,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>La localización es requerida para mostrar tu ubicación al consultar el mapa durante el inicio y finalización de jornada.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>La localización es requerida para mostrar tu ubicación al consultar el mapa durante el incio y finalización de jornada.</string>
 </dict>
 </plist>
