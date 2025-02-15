@@ -10,11 +10,11 @@ div.carousel-container{
 }
 div.task-carousel{
     margin-left: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
     gap: 1rem;
     .task-card{
         width: 5.5rem;
+        min-width: 5.5rem;
         height: 5.5rem;
         border-radius: 10px ;
         text-align: center;
@@ -54,5 +54,12 @@ div.task-carousel{
             font-size: var(--xlarge);
             margin-bottom: 0.3rem;
         }
+    }
+    .comodin{
+        min-width: 1px;
+        width: 1px;
+        max-width: 1px;
+        margin: 0;
+        padding: 0;
     }
 }
