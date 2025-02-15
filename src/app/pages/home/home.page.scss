@@ -52,8 +52,7 @@ ion-footer{
     border-top-right-radius: 30px;
     position: absolute;
     bottom: 0;
-    padding-bottom:6rem;
-    height: 60%;
+    padding-bottom:3rem;
     .container{
         padding: 1.5rem;
     }
@@ -101,10 +100,10 @@ ion-footer {
     transition: all 0.3s ease-in-out;
   
     &.footer-grow {
-      height: 70%;
+      padding-bottom: 7rem;
     }
   
     &.footer-shrink {
-      height: 60%;
+      padding-bottom: 3rem;
     }
   }
