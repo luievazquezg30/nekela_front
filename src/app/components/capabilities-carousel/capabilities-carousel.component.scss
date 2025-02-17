@@ -7,8 +7,7 @@
     }
 }
 .capabilities-carousel{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 1rem;
     ion-card{
         padding: 0.5rem;
@@ -53,5 +52,8 @@
                 }
             }
         }
+    }
+    ion-card.comodin{
+        min-width: 1rem;
     }
 }

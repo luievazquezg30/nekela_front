@@ -31,7 +31,7 @@ export class HomePage implements OnInit {
       const gesture = this.gestureCtrl.create({
         el: this.footer.nativeElement,
         gestureName: 'swipe-footer',
-        threshold: 70,
+        threshold: 60,
         direction: 'y',
         onStart: () => {
           this.cdRef.detectChanges();

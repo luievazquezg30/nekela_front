@@ -11,8 +11,7 @@ import { AdministrativeActasComponent } from '../administrative-actas/administra
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CapabilitiesCarouselComponent  implements OnInit {
-
-  constructor( private modalCtrl: ModalController) { }
+  constructor( private modalCtrl: ModalController, private route: Router) { }
 
   ngOnInit() {}
   async openSuggestionBox(item: any = null): Promise<any> {
@@ -53,4 +52,7 @@ export class CapabilitiesCarouselComponent  implements OnInit {
         });
       });
     }
+     reports(){
+    this.route.navigate(['/reports']);
+  }
 }

@@ -1,0 +1,44 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-button (click)="dimiss()" class="back" shape="round">
+    <ion-icon slot="icon-only" name="close-sharp"></ion-icon>
+  </ion-button>
+  <div class="form-content">
+    <div class="form">
+      <h1>Reporte en proceso</h1>
+      <div class="progress-bar">
+        <div class="item" [ngClass]="step > 0 ? 'active' : ''"></div>
+        <div class="item" [ngClass]="step > 1 ? 'active' : ''"></div>
+        <div class="item" [ngClass]="step > 2 ? 'active' : ''"></div>
+      </div>
+      <div class="step" *ngIf="step === 1">
+        <h6>Información General:</h6>
+        <ion-label>
+          <ion-input type="date" label="Fecha de evento"></ion-input>
+        </ion-label>
+        <ion-input type="text" placeholder="Lugar de evento"></ion-input>
+        <ion-input type="text" placeholder="Personas involucradas"></ion-input>
+      </div>
+      <div class="step" *ngIf="step === 2">
+        <h6>Descripción detallada:</h6>
+        <ion-input type="text" placeholder="Descripción del evento"></ion-input>
+      </div>
+      <div class="step" *ngIf="step === 3">
+        <h6>Evidencia del evento:</h6>
+        <ion-item class="ion-no-padding" lines="none" *ngFor="let i of [1,2,3,4,5]; let index;">
+          <ion-icon slot="start" class="camera" name="camera-outline" *ngIf="!fields['image' + index]"></ion-icon>
+          <ion-img [src]="fields['image' + index].webPath" class="preview" *ngIf="fields['image' + index]"/>
+          <ion-label>Fotografía de evidencia</ion-label>
+          <ion-button (click)="openCamera(index)" class="add-btn" *ngIf="!fields['image' + index]">
+            <ion-icon slot="end" name="add-sharp"></ion-icon>
+          </ion-button>
+          <ion-button (click)="removeImg(index)" class="remove-btn" *ngIf="fields['image' + index]">
+            <ion-icon slot="end" name="remove-outline"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </div>
+    </div>
+    <ion-button (click)="next()" expand="block" class="secondary" shape="round">
+      Continuar
+    </ion-button>
+  </div>
+</ion-content>
