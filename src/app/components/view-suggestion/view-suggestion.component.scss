@@ -1,0 +1,102 @@
+.custom-toolbar {
+    width: 85%;
+    border: 1px solid var(--gray-light);
+    border-radius: 40px;
+    padding-inline-start: 1.5rem;
+    padding-inline-end: 1.5rem;
+    font-size: var(--medium);
+    min-height: 0!important;
+    height: 2.7rem;
+    --padding-bottom: 4px;
+    --background: transparent;
+}
+
+.checkIcon{
+    width: 12%;
+    height: 12%;
+    margin-right: 10%;
+    margin-left: 5%;
+    border-radius: 100%;
+    padding: 1%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redirectIcon{
+    font-size: 15px;
+    margin-top: auto;
+    margin-bottom: 10px;
+    margin-right: 2%;
+    margin-left: 3%;
+    transform: scaleX(-1);
+    background-color: #f2f7ff;
+    border-radius: 100px; 
+    padding: 1%; 
+}
+
+
+.text-container {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 10px; 
+    max-width: 500px; 
+    width: 63%;
+    padding: 0 10px; 
+    text-align: justify;
+    margin-left: -15px;
+  }
+
+  .capTitle, .capDescription {
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+    word-break: break-word; 
+    margin-bottom: 5px;
+    padding: 1px 0;
+  }
+
+  .capDescription {
+    white-space: normal;
+    margin-top: -6px;
+  }
+
+  .capTitle{
+    font-size: 12px;
+    
+}
+.capDescription{
+    font-size: 10px;
+}
+
+.verMas{
+    color: #223D72;
+    font-size: 12px;
+    text-align: center;
+    align-items: center;
+    
+}
+.text-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-color{
+    --background: #E5D341; 
+    color: black;
+    width: 85%;
+}
+
+
+ion-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cov;
+  width: 100px; 
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; 
+}

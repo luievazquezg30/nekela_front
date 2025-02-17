@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div style="display: flex; align-items: center; justify-content: center; position: relative; width: 100%;" >
+      <ion-title size="large" class="titleTabs" style="text-align: center;"></ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <div style="display: flex; align-items: center; justify-content: center; position: relative; width: 100%;" >
+        <ion-icon class="backArrow" name="chevron-back-outline" (click)="goBack()"></ion-icon>
+        <ion-title size="large" class="titleTabs"></ion-title>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <div style="margin-left: 7%;">
+    <h1><strong>Sugerencia en Proceso</strong></h1>
+  </div>
+
+  <div class="form-container">
+    <ion-label class="form-label"><strong>Información General</strong></ion-label>
+    <div class="input-container">
+      
+      <ion-input class="custom-input" type="text" placeholder="Título de Sugerencia"></ion-input>
+      <ion-input class="custom-input" type="text" placeholder="Descripción de Sugerencia"></ion-input>
+    </div>
+</div>
+
+
+   
+  
+  
+
+
+  
+
+
+
+</ion-content>
+
+<ion-footer class="footer-container">
+  <div class="footer-content">
+    <ion-icon name="chevron-back-outline" (click)="goBack()"></ion-icon>
+    <ion-button class="btn-color">Continuar</ion-button>
+  </div>
+</ion-footer>
+
+
