@@ -2,13 +2,14 @@ import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonCard, IonImg, IonIcon, ModalController } from '@ionic/angular/standalone';
 import { SuggestionBoxComponent } from '../suggestion-box/suggestion-box.component';
 import { AdministrativeActasComponent } from '../administrative-actas/administrative-actas.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-capabilities-carousel',
   templateUrl: './capabilities-carousel.component.html',
   styleUrls: ['./capabilities-carousel.component.scss'],
   imports: [IonCard, IonImg, IonIcon],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class CapabilitiesCarouselComponent  implements OnInit {
   constructor( private modalCtrl: ModalController, private route: Router) { }
