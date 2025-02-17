@@ -1,0 +1,100 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div style="display: flex; align-items: center; justify-content: center; position: relative; width: 100%;" >
+      <ion-title size="large" class="titleTabs" style="text-align: center;">Actas Administrativas</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <div style="display: flex; align-items: center; justify-content: center; position: relative; width: 100%;" >
+        <ion-icon class="backArrow" name="chevron-back-outline" (click)="goBack()"></ion-icon>
+        <ion-title size="large" class="titleTabs">Actas Administrativas</ion-title>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <div style="margin-top: 8%;" >
+      <ion-title>
+        <ion-icon name="search"></ion-icon> 
+      </ion-title>
+      <div style="justify-content: center; display: flex;">
+        <ion-searchbar placeholder="Buscar..." showClearButton="always" class="custom-toolbar"></ion-searchbar>
+      </div>
+  </div>
+
+
+  <ion-list lines="inset" style="margin-top: 7%;">
+    <ion-item>
+      <div class="checkIcon">
+        <ion-img style="width: 15px;" src="assets/images/suggestion_box_ic.png"></ion-img>
+      </div>
+      <div class="text-container">
+        <ion-text class="capTitle"><strong>Acta Administrativa 1</strong></ion-text>
+        <ion-text class="capDescription">12/09/25</ion-text>
+      </div>
+
+      <div class="verMas">
+        <ion-text >Descargar</ion-text>
+      </div>
+
+    </ion-item>
+
+    <ion-item>
+      <div class="checkIcon">
+        <ion-img style="width: 15px;" src="assets/images/suggestion_box_ic.png"></ion-img>
+      </div>
+      <div class="text-container">
+        <ion-text class="capTitle"><strong>Acta Administrativa 2</strong></ion-text>
+        <ion-text class="capDescription">12/09/25</ion-text>
+      </div>
+
+      <div class="verMas">
+        <ion-text >Descargar</ion-text>
+      </div>
+
+    </ion-item>
+
+    <ion-item>
+      <div class="checkIcon">
+        <ion-img style="width: 15px;" src="assets/images/suggestion_box_ic.png"></ion-img>
+      </div>
+      <div class="text-container">
+        <ion-text class="capTitle"><strong>Acta Administrativa 3</strong></ion-text>
+        <ion-text class="capDescription">12/09/25</ion-text>
+      </div>
+
+      <div class="verMas">
+        <ion-text >Descargar</ion-text>
+      </div>
+
+    </ion-item>
+    <ion-item>
+      <div class="checkIcon">
+        <ion-icon  name="reader-outline" style="width: 15px;"></ion-icon>
+      </div>
+      <div class="text-container">
+        <ion-text class="capTitle"><strong>Acta Administrativa 4</strong></ion-text>
+        <ion-text class="capDescription">12/09/25</ion-text>
+      </div>
+
+      <div class="verMas">
+        <ion-text >Descargar</ion-text>
+      </div>
+
+    </ion-item>
+
+
+
+  </ion-list>
+
+
+
+  
+
+
+
+</ion-content>
