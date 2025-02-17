@@ -3,6 +3,7 @@ import { IonCard, IonImg, IonIcon, ModalController } from '@ionic/angular/standa
 import { NavController } from '@ionic/angular';
 import { ViewSuggestionComponent } from '../view-suggestion/view-suggestion.component';
 import { SendSuggestionComponent } from '../send-suggestion/send-suggestion.component';
+import { ViewActaComponent } from '../view-acta/view-acta.component';
 
 @Component({
   selector: 'app-administrative-actas',
@@ -62,6 +63,24 @@ export class AdministrativeActasComponent  implements OnInit {
     });
   }
 
-
+  async openViewActa(item: any = null): Promise<any> {
+    return new Promise<any>(async resolve => {
+      const modal = await this.modalCrtl.create({
+        backdropDismiss: true,
+        component: ViewActaComponent,
+        mode: 'ios',
+        id: 'modal-reserve',
+        componentProps: {
+          item: item
+        }
+      });
+  
+      await modal.present();
+  
+      modal.onDidDismiss().then(data => {
+        resolve(data.data);
+      });
+    });
+  }
 
 }

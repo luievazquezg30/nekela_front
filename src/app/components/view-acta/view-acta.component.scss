@@ -34,7 +34,7 @@
     width: 63%;
     padding: 0 10px; 
     text-align: justify;
-    margin-left: -15px;
+
   }
 
   .capTitle, .capDescription {
@@ -42,7 +42,6 @@
     word-wrap: break-word;
     word-break: break-word; 
     margin-bottom: 5px;
-    padding: 1px 0;
   }
 
   .capDescription {
@@ -52,10 +51,12 @@
 
   .capTitle{
     font-size: small;
+    font-weight: 500;
     
 }
 .capDescription{
-    font-size: x-small;
+    font-size: 12px;
+    font-weight: 200;
 }
 
 .verMas{
@@ -95,4 +96,10 @@ ion-img {
   object-fit: cover; 
   border-radius: 50%;
   overflow: hidden;
+}
+
+.btn-color{
+  --background: #E5D341; 
+  color: black;
+  width: 85%;
 }

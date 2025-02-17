@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div style="display: flex; align-items: center; justify-content: center; position: relative; width: 100%;" >
+      <ion-title size="large" class="titleTabs" style="text-align: center;">Detalle de Acta</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <div style="display: flex; align-items: center; justify-content: center; position: relative; width: 100%;" >
+        <ion-icon class="backArrow" name="chevron-back-outline" (click)="goBack()"></ion-icon>
+        <ion-title size="large" class="titleTabs">Detalle de Acta</ion-title>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+  <ion-list lines="inset" style="margin-top: 7%;">
+    <ion-item>  
+      <div class="text-container">
+        <ion-text class="capTitle">Nombre del Empleado:</ion-text>
+        <ion-text class="capDescription">Jorge Carlos Lopez Zavala</ion-text>
+      </div>
+    </ion-item>
+    <ion-item>  
+      <div class="text-container">
+        <ion-text class="capTitle">Nombre de Supervisor:</ion-text>
+        <ion-text class="capDescription">Manuel Díaz Tirado</ion-text>
+      </div>
+    </ion-item>
+    <ion-item>  
+      <div class="text-container">
+        <ion-text class="capTitle">Lugar de Evento:</ion-text>
+        <ion-text class="capDescription">Departamento de diseño</ion-text>
+      </div>
+    </ion-item>
+    <ion-item>  
+      <div class="text-container">
+        <ion-text class="capTitle">Fecha de evento:</ion-text>
+        <ion-text class="capDescription">29 de agosto de 2024</ion-text>
+      </div>
+    </ion-item>
+    <ion-item>  
+      <div class="text-container">
+        <ion-text class="capTitle">Asunto:</ion-text>
+        <ion-text class="capDescription">Impuntualidad en entradas</ion-text>
+      </div>
+    </ion-item>
+  </ion-list>
+</div>
+
+  
+
+</ion-content>
+
+<ion-footer style="margin-bottom: 7%;">
+
+  <div style="justify-content: center; display: flex ;">
+    <ion-button class="btn-color">
+      Descargar Acta
+    </ion-button>
+  </div>
+
+
+
+</ion-footer>

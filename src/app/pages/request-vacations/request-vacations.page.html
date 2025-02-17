@@ -1,0 +1,38 @@
+<app-custom-header [title]="'Solicitud'"></app-custom-header>
+
+<ion-content [fullscreen]="true" class="ion-padding custom-padding">
+  <ion-card class="header ion-no-margin">
+    <ion-img src="assets/images/image-3.png"></ion-img>
+    <div class="card-details">
+      <p class="title ion-no-margin">Canal</p>
+      <p class="subtitle ion-no-margin">De Solicitud de Vacaciones</p>
+    </div>
+  </ion-card>
+  <h6 class="ion-no-margin">Proceso de Solicitud</h6>
+  <ion-list>
+    <ion-item class="ion-no-padding lines" lines="none">
+      <ion-icon slot="start" name="checkmark-sharp"></ion-icon>
+      <div class="body">
+        <p class="ion-no-margin title">Fechas</p>
+        <p class="ion-no-margin subtitle">Introduce la fecha de egreso e ingreso</p>
+      </div>
+    </ion-item>
+    <ion-item class="ion-no-padding lines" lines="none">
+      <ion-icon slot="start" name="checkmark-sharp"></ion-icon>
+      <div class="body">
+        <p class="ion-no-margin title">Motivo de solicitud</p>
+        <p class="ion-no-margin subtitle">Ingresa el motivo por el cual esta solicitando vacaciones</p>
+      </div>
+    </ion-item>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-icon slot="start" name="checkmark-sharp"></ion-icon>
+      <div class="body">
+        <p class="ion-no-margin title">Envío y espera </p>
+        <p class="ion-no-margin subtitle">Envía la solicitud y espera la aceptación en el apartado de notificaciones</p>
+      </div>
+    </ion-item>
+    <ion-button (click)="startRequest()" expand="block" class="secondary" shape="round">
+      Solicitar Vacaciones
+    </ion-button>
+  </ion-list>
+</ion-content>

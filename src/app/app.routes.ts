@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import { authGuard } from './auth.guard';
+import { RequestVacationsPage } from './pages/request-vacations/request-vacations.page';
+import { RequestPage } from './pages/request/request.page';
 
 export const routes: Routes = [
   {
@@ -47,5 +49,13 @@ export const routes: Routes = [
   {
     path: 'report',
     loadComponent: () => import('./pages/report/report.page').then( m => m.ReportPage)
+  },
+  {
+    path: 'request-vacations',
+    loadComponent: () => import('./pages/request-vacations/request-vacations.page').then( m => m.RequestVacationsPage)
+  },
+  {
+    path: 'request',
+    loadComponent: () => import('./pages/request/request.page').then( m => m.RequestPage)
   },
 ];

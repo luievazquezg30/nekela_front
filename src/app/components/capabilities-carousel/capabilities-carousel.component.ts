@@ -3,6 +3,7 @@ import { IonCard, IonImg, IonIcon, ModalController } from '@ionic/angular/standa
 import { SuggestionBoxComponent } from '../suggestion-box/suggestion-box.component';
 import { AdministrativeActasComponent } from '../administrative-actas/administrative-actas.component';
 import { Router } from '@angular/router';
+import { RequestVacationsPage } from 'src/app/pages/request-vacations/request-vacations.page';
 
 @Component({
   selector: 'app-capabilities-carousel',
@@ -55,5 +56,25 @@ export class CapabilitiesCarouselComponent  implements OnInit {
     }
      reports(){
     this.route.navigate(['/reports']);
+  }
+
+  async openRequestVacations(item: any = null): Promise<any> {
+    return new Promise<any>(async resolve => {
+      const modal = await this.modalCtrl.create({
+        backdropDismiss: true,
+        component: RequestVacationsPage,
+        mode: 'ios',
+        id: 'modal-reserve',
+        componentProps: {
+          item: item
+        }
+      });
+  
+      await modal.present();
+  
+      modal.onDidDismiss().then(data => {
+        resolve(data.data);
+      });
+    });
   }
 }
