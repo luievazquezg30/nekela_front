@@ -43,6 +43,9 @@
     font-weight: 100 900;
     font-style: normal;
 }
+html{
+    --ion-font-family: 'Inter', sans-serif;
+}
 :root[mode=ios] {
     --home-padding-top: 4rem;
     --modal-padding-top: 9rem;
