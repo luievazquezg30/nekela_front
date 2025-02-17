@@ -106,4 +106,7 @@ ion-footer {
     &.footer-shrink {
       padding-bottom: 3rem;
     }
-  }
+}
+ion-item-divider{
+    z-index: 0;
+}
