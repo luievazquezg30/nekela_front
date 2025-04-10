@@ -1,5 +1,5 @@
 import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { IonCard, IonImg, IonIcon, ModalController } from '@ionic/angular/standalone';
+import { IonCard, IonImg, IonIcon, ModalController, IonButton } from '@ionic/angular/standalone';
 import { SuggestionBoxComponent } from '../suggestion-box/suggestion-box.component';
 import { AdministrativeActasComponent } from '../administrative-actas/administrative-actas.component';
 import { Router } from '@angular/router';
@@ -9,7 +9,7 @@ import { RequestVacationsPage } from 'src/app/pages/request-vacations/request-va
   selector: 'app-capabilities-carousel',
   templateUrl: './capabilities-carousel.component.html',
   styleUrls: ['./capabilities-carousel.component.scss'],
-  imports: [IonCard, IonImg, IonIcon],
+  imports: [IonCard, IonImg, IonIcon, IonButton],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class CapabilitiesCarouselComponent  implements OnInit {

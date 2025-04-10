@@ -1,5 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
-import { IonCard, IonImg, IonIcon, ModalController,IonButton, IonHeader } from '@ionic/angular/standalone';
+import { IonCard, IonImg, IonIcon, ModalController, IonButton, IonHeader, IonFooter, IonText, IonItem, IonList, IonTitle, IonToolbar, IonContent } from '@ionic/angular/standalone';
 import { NavController } from '@ionic/angular';
 import { SendSuggestionComponent } from '../send-suggestion/send-suggestion.component';
 
@@ -8,7 +8,7 @@ import { SendSuggestionComponent } from '../send-suggestion/send-suggestion.comp
   templateUrl: './view-acta.component.html',
   styleUrls: ['./view-acta.component.scss'],
   standalone: true,
-  imports: [],
+  imports: [IonButton, IonFooter, IonText, IonItem, IonList, IonTitle, IonIcon, IonToolbar, IonHeader, IonContent],
 })
 export class ViewActaComponent  implements OnInit {
 
